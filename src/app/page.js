@@ -74,14 +74,14 @@ export default function Home() {
                 </div>
                 <div className="flex-1 w-full max-w-md">
                     <AspectRatio
-                        ratio={16 / 9}
+                        ratio={16 / 10}
                         className="bg-green-800/50 rounded-lg overflow-hidden border-2 border-green-700 shadow-lg"
                     >
                         <Image
                             src="/images/bosqueEncantado.jpg"
                             alt="Enchanted Quest Game Screenshot"
                             fill
-                            className="object-contain rounded-lg"
+                            className="object-cover rounded-lg"
                         />
                     </AspectRatio>
                 </div>
@@ -191,7 +191,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* CTA Section */}
             <section className="container mx-auto py-16 px-4 md:px-6 text-center">
                 <div className="max-w-2xl mx-auto space-y-6">
                     <h2 className="text-3xl md:text-4xl font-bold">
