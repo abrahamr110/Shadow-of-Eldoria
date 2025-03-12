@@ -89,10 +89,10 @@ export default function Home() {
                         className="bg-green-800/50 rounded-lg overflow-hidden border-2 border-green-700 shadow-lg"
                     >
                         <Image
-                            src="/src/images/Personaje_Shadow_Of_Eldoria-SinFondo.png"
+                            src="/Personaje_Shadow_Of_Eldoria-SinFondo.png"
                             alt="Enchanted Quest Game Screenshot"
                             fill
-                            className="object-cover rounded-lg"
+                            className="object-contain rounded-lg"
                         />
                     </AspectRatio>
                 </div>
