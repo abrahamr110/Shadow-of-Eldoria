@@ -21,7 +21,7 @@ export default function Home() {
             <header className="container mx-auto py-4 px-4 md:px-6 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <Sword className="h-6 w-6" />
-                    <span className="font-bold text-xl">Enchanted Quest</span>
+                    <span className="font-bold text-xl">Shadow of Eldoria</span>
                 </div>
                 <nav className="hidden md:flex items-center gap-6">
                     <Link
@@ -36,12 +36,6 @@ export default function Home() {
                     >
                         Personaje
                     </Link>
-                    <Link
-                        href="#world"
-                        className="hover:text-green-300 transition-colors"
-                    >
-                        Mundo
-                    </Link>
                     <Button
                         variant="outline"
                         className="border-green-400 text-green-400 hover:bg-green-400 hover:text-green-950"
@@ -49,9 +43,6 @@ export default function Home() {
                         Jugar Ahora
                     </Button>
                 </nav>
-                {/* <Button variant="ghost" size="icon" className="md:hidden">
-                    <Gamepad2 className="h-6 w-6" />
-                </Button> */}
             </header>
 
             {/* Hero Section */}
@@ -89,7 +80,7 @@ export default function Home() {
                         className="bg-green-800/50 rounded-lg overflow-hidden border-2 border-green-700 shadow-lg"
                     >
                         <Image
-                            src="/Personaje_Shadow_Of_Eldoria-SinFondo.png"
+                            src="/images/bosqueEncantado.jpg"
                             alt="Enchanted Quest Game Screenshot"
                             fill
                             className="object-contain rounded-lg"
