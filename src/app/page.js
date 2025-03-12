@@ -1,102 +1,117 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Carousel } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const MedievalVideo = dynamic(() => import("@/components/MedievalVideo"), {
+    ssr: false,
+});
 
 export default function Home() {
     return (
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-                <Image
-                    className="dark:invert"
-                    src="/next.svg"
-                    alt="Next.js logo"
-                    width={180}
-                    height={38}
-                    priority
+        <div className="bg-gray-900 text-white min-h-screen">
+            <Head>
+                <title>Medieval Legends - The Game</title>
+                <meta
+                    name="description"
+                    content="Experience the ancient world of Medieval Legends. A 2D adventure awaits!"
                 />
-                <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-                    <li className="mb-2">
-                        Get started by editing{" "}
-                        <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-                            src/app/page.js
-                        </code>
-                        .
-                    </li>
-                    <li>Save and see your changes instantly.</li>
-                </ol>
+            </Head>
 
-                <div className="flex gap-4 items-center flex-col sm:flex-row">
-                    <a
-                        className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Image
-                            className="dark:invert"
-                            src="/vercel.svg"
-                            alt="Vercel logomark"
-                            width={20}
-                            height={20}
-                        />
-                        Deploy now
-                    </a>
-                    <a
-                        className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-                        href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Read our docs
-                    </a>
+            <header
+                className="relative h-screen flex items-center justify-center bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/medieval_bg.jpg')" }}
+            >
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="text-center p-8"
+                >
+                    <h1 className="text-5xl font-extrabold text-yellow-500">
+                        Medieval Legends
+                    </h1>
+                    <p className="text-lg mt-4">
+                        An epic journey through a mystical medieval world.
+                    </p>
+                    <Button className="mt-6 text-xl">Play Now</Button>
+                </motion.div>
+            </header>
+
+            <section className="py-12 px-4 md:px-12 bg-gray-800">
+                <h2 className="text-3xl font-bold text-center mb-6">
+                    Game Features
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <Card>
+                        <CardContent>
+                            <h3 className="text-xl font-semibold">
+                                Dynamic Combat
+                            </h3>
+                            <p>
+                                Engage in thrilling battles with medieval
+                                warriors.
+                            </p>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardContent>
+                            <h3 className="text-xl font-semibold">
+                                Exploration
+                            </h3>
+                            <p>
+                                Discover ancient castles, dark dungeons, and
+                                enchanted forests.
+                            </p>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardContent>
+                            <h3 className="text-xl font-semibold">
+                                Rich Storyline
+                            </h3>
+                            <p>Unravel the secrets of a forgotten kingdom.</p>
+                        </CardContent>
+                    </Card>
                 </div>
-            </main>
-            <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-                <Button>aaa</Button>
-                <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                    href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+            </section>
+
+            <section className="py-12 bg-black text-center">
+                <h2 className="text-3xl font-bold mb-6">Game Trailer</h2>
+                <MedievalVideo />
+            </section>
+
+            <section className="py-12 px-4 md:px-12 bg-gray-800">
+                <h2 className="text-3xl font-bold text-center mb-6">
+                    Screenshots
+                </h2>
+                <Carousel>
                     <Image
-                        aria-hidden
-                        src="/file.svg"
-                        alt="File icon"
-                        width={16}
-                        height={16}
+                        src="/images/ss1.jpg"
+                        width={600}
+                        height={400}
+                        alt="Screenshot 1"
                     />
-                    Learn
-                </a>
-                <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
                     <Image
-                        aria-hidden
-                        src="/window.svg"
-                        alt="Window icon"
-                        width={16}
-                        height={16}
+                        src="/images/ss2.jpg"
+                        width={600}
+                        height={400}
+                        alt="Screenshot 2"
                     />
-                    Examples
-                </a>
-                <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                    href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
                     <Image
-                        aria-hidden
-                        src="/globe.svg"
-                        alt="Globe icon"
-                        width={16}
-                        height={16}
+                        src="/images/ss3.jpg"
+                        width={600}
+                        height={400}
+                        alt="Screenshot 3"
                     />
-                    Go to nextjs.org →
-                </a>
+                </Carousel>
+            </section>
+
+            <footer className="py-6 bg-gray-900 text-center">
+                <p>&copy; 2025 Medieval Legends. All rights reserved.</p>
             </footer>
         </div>
     );
