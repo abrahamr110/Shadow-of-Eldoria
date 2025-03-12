@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Download, Gamepad2, Sword, Trees, User } from "lucide-react";
+import { Download, Sword, Trees, User } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -20,7 +20,9 @@ export default function Home() {
             <header className="container mx-auto py-4 px-4 md:px-6 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <Sword className="h-6 w-6" />
-                    <span className="font-bold text-xl">Shadow of Eldoria</span>
+                    <Link href={"/"} className="font-bold text-xl">
+                        Shadow of Eldoria
+                    </Link>
                 </div>
                 <nav className="hidden md:flex items-center gap-6">
                     <Link
@@ -118,9 +120,9 @@ export default function Home() {
                             </CardHeader>
                             <CardContent>
                                 <CardDescription className="text-gray-300">
-                                    Explora un vasto bosque encantado con
-                                    múltiples biomas, secretos ocultos y
-                                    misiones secundarias.
+                                    Explora un bosque encantado con múltiples
+                                    sombras, secretos ocultos y misiones
+                                    secundarias.
                                 </CardDescription>
                             </CardContent>
                         </Card>
@@ -237,7 +239,7 @@ export default function Home() {
                             </Link>
                         </div>
                         <div className="text-sm text-gray-400">
-                            © 2025 Enchanted Quest. Todos los derechos
+                            © 2025 Shadow of Eldoria. Todos los derechos
                             reservados.
                         </div>
                     </div>
