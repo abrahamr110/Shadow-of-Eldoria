@@ -17,7 +17,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 export default function Home() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-green-950 to-green-900 text-white">
-            {/* Header */}
             <header className="container mx-auto py-4 px-4 md:px-6 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <Sword className="h-6 w-6" />
@@ -45,7 +44,6 @@ export default function Home() {
                 </nav>
             </header>
 
-            {/* Hero Section */}
             <section className="container mx-auto py-12 md:py-24 px-4 md:px-6 flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1 space-y-4">
                     <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -89,7 +87,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Features Section */}
             <section id="features" className="bg-green-900/50 py-16">
                 <div className="container mx-auto px-4 md:px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -147,7 +144,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Character Section */}
             <section
                 id="character"
                 className="container mx-auto py-16 px-4 md:px-6"
@@ -158,11 +154,11 @@ export default function Home() {
                             El Héroe del Bosque
                         </h2>
                         <p className="text-gray-300 mb-4">
-                            Conoce a Eldrin, un joven caballero con un destino
+                            Conoce a Kael, un joven caballero con un destino
                             extraordinario. Dotado con la capacidad de
-                            comunicarse con los espíritus del bosque, Eldrin
-                            debe restaurar el equilibrio en el reino y derrotar
-                            a las fuerzas oscuras.
+                            comunicarse con los espíritus del bosque, Kael debe
+                            restaurar el equilibrio en el reino y derrotar a las
+                            fuerzas oscuras.
                         </p>
                         <ul className="space-y-2 text-gray-300">
                             <li className="flex items-center gap-2">
@@ -184,8 +180,8 @@ export default function Home() {
                             <div className="absolute inset-0 bg-green-400/20 rounded-full blur-3xl"></div>
                             <div className="relative h-full w-full rounded-full overflow-hidden border-2 border-green-400">
                                 <Image
-                                    src="/placeholder.svg?height=320&width=320"
-                                    alt="Eldrin - Main Character"
+                                    src="/images/Personaje_Shadow_Of_Eldoria-SinFondo.png"
+                                    alt="Kael"
                                     fill
                                     className="object-cover"
                                 />
@@ -214,13 +210,12 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Footer */}
             <footer className="bg-green-950 py-8 border-t border-green-800">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <div className="flex items-center gap-2">
                             <Sword className="h-5 w-5 text-green-400" />
-                            <span className="font-bold">Enchanted Quest</span>
+                            <span className="font-bold">Shadow of Eldoria</span>
                         </div>
                         <div className="flex gap-6">
                             <Link
